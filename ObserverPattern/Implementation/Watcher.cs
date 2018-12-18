@@ -16,7 +16,15 @@ namespace ObserverPattern.Implementation
         public void GetChangedFiles()
         {
             //fake implementation just for call architectual mechanism
-            parameters = new WatcherResult();
+            parameters = new WatcherResult()
+            {
+                ValueA = "some value a",
+                ValueB = "some value b",
+                ValueC = "some value c",
+                OtherValues = new[] {"value1", "value2"}
+            };
+
+            UpdateState();
         }
 
         public void AddObserver(ISimpleObserver observer)
