@@ -5,5 +5,6 @@ namespace ObserverPattern.Interfaces
         string ValueA { get; set; }
         string ValueB { get; set; }
         string ValueC { get; set; }
+        string[] OtherValues { get; set; }
     }
 }
