@@ -16,6 +16,12 @@ namespace ObserverPattern
             
             watcher.GetChangedFiles();
 
+            Console.WriteLine("Remove observer SendMail.");
+            watcher.RemoveObserver(mailSender);
+
+            Console.WriteLine("Update watcher again");
+            watcher.GetChangedFiles();
+            
             Console.ReadLine();
         }
     }
