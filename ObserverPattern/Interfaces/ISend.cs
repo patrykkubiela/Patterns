@@ -1,7 +1,7 @@
 namespace ObserverPattern.Interfaces
 {
-    public interface IShow
+    public interface ISend
     {
-        void ShowResult();
+        void Send();
     }
 }
