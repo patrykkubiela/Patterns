@@ -1,3 +1,4 @@
+using System;
 using ObserverPattern.Interfaces;
 
 namespace ObserverPattern.Implementation
@@ -6,12 +7,14 @@ namespace ObserverPattern.Implementation
     {
         public void OnUpdate(ISimpleParameters parameters)
         {
-            throw new System.NotImplementedException();
+            var message = string.Join(", ", parameters.OtherValues);
+            Send($"SendMail: {message}");
         }
 
-        public void Send()
+        public void Send(string message)
         {
-            throw new System.NotImplementedException();
+            //fake implementation
+            Console.WriteLine(message);
         }
     }
 }
